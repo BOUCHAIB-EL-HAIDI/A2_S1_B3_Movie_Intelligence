@@ -7,6 +7,11 @@ services:
       - "27017:27017"
     volumes:
       - mongodb_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   app:
     build:
@@ -17,8 +22,12 @@ services:
       - "8501:8501"
     volumes:
       - .:/app
+    environment:
+      - MONGODB_HOST=mongodb
+      - MONGODB_PORT=27017
     depends_on:
-      - mongodb
+      mongodb:
+        condition: service_healthy
 
   airflow:
     build:
@@ -31,13 +40,20 @@ services:
       - ./dags:/opt/airflow/dags
       - ./src:/opt/airflow/src
       - ./data:/opt/airflow/data
+      - ./models:/opt/airflow/models
+      - ./.env:/opt/airflow/.env:ro
     environment:
       AIRFLOW__CORE__EXECUTOR: SequentialExecutor
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+      AIRFLOW__WEBSERVER__SECRET_KEY: movie_intelligence_secret_key_12345
+      PYTHONPATH: /opt/airflow:/opt/airflow/src
+      MONGODB_HOST: mongodb
+      MONGODB_PORT: "27017"
     command: standalone
     depends_on:
-      - mongodb
+      mongodb:
+        condition: service_healthy
 
 volumes:
   mongodb_data:
