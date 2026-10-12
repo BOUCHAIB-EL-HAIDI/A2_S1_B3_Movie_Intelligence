@@ -17,6 +17,7 @@ from sklearn.metrics import (
     confusion_matrix
 )
 
+
 BASE_DIR = Path(__file__).resolve().parents[2]
 sys.path.append(str(BASE_DIR / "src"))
 INPUT_FILE = BASE_DIR / "data" / "processed" / "movies_features.json"
