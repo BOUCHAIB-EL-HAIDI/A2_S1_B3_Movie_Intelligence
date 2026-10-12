@@ -7,6 +7,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-8.0-47A248.svg?logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.40+-FF4B4B.svg?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-ML%20Pipelines-F7931E.svg?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
+[![Jira Board](https://img.shields.io/badge/Jira-MOV%20Backlog-0052CC.svg?logo=jira&logoColor=white)](https://bouchaibelhaidi96.atlassian.net/jira/software/c/projects/MOV/boards/2/backlog)
 
 ---
 
@@ -252,6 +253,13 @@ L'interface utilisateur interactive ([dashboard/app.py](dashboard/app.py)) offre
 - **Overview** : KPI globaux (nombre de films, distribution des langues, notes moyennes, top genres).
 - **Classification & Inférence** : Sélection d'un film pour estimer et visualiser son score d'engagement.
 - **Clusters Financiers** : Exploration interactive des groupes budgétaires, projections 2D dynamiques et diagrammes de répartition.
+
+---
+
+## 📋 Gestion de Projet & Suivi Agile (Jira)
+
+- **Tableau Jira (Backlog & Sprints)** : [Jira Software - Projet MOV](https://bouchaibelhaidi96.atlassian.net/jira/software/c/projects/MOV/boards/2/backlog)
+- **Fichier d'importation du backlog** : [`jira_backlog_import.csv`](jira_backlog_import.csv) (contenant les 4 Epics, 13 User Stories, Story Points et critères d'acceptation du référentiel RNCP).
 
 ---
 
