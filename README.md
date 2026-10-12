@@ -259,7 +259,7 @@ L'interface utilisateur interactive ([dashboard/app.py](dashboard/app.py)) offre
 ## 📋 Gestion de Projet & Suivi Agile (Jira)
 
 - **Tableau Jira (Backlog & Sprints)** : [Jira Software - Projet MOV](https://bouchaibelhaidi96.atlassian.net/jira/software/c/projects/MOV/boards/2/backlog)
-- **Fichier d'importation du backlog** : [`jira_backlog_import.csv`](jira_backlog_import.csv) (contenant les 4 Epics, 13 User Stories, Story Points et critères d'acceptation du référentiel RNCP).
+- **Lien de planification** : Retrouvez également le lien dans le fichier [`planification.md`](planification.md).
 
 ---
 
